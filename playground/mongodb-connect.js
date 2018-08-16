@@ -4,7 +4,7 @@ MongoClient = mongodb.MongoClient;
 // var id = new ObjectID();
 // console.log(is);
 
-MongoClient.connect('mongodb://localhost:27017/test', (err, db) => {
+MongoClient.connect(process.env.MONDODB_URI, (err, db) => {
     if (err) {
         return console.log('unable to connect to MongoDB server');
     }
